@@ -1,0 +1,48 @@
+<% if user_signed_in? %>
+
+<div class="container-fluid" style="text-align: center;">
+  <div class="row">
+    <div class="col-md-4" id="signinbox">
+
+        <div class="container">
+        <span class="formheader"><h2>Tails</h2>
+          <p>When police find a body in an apartment belonging to someone else, a patchwork mystery reveals itself over the course of four short films.
+
+            <br/><br />Featuring Jonathan Bock, Evan Caminiti, Tanner Dahlin, Matt Davidson, Sara Feinstein, Sean O'Reilly and Johnna Scrabis. 
+
+            <br/><br/> Written and Directed by Justin Lamb
+
+            <br/><br/><a class="btn btn-danger" href="/tails.html" role="button">Watch Now</a>
+          <br/>
+
+
+        <div class="container">
+        <% flash.each do |name, msg| %>
+        <%= content_tag(:div, msg, class: "alert alert-info") %>
+        <% end %>
+        </div> 
+      </p></span>
+     </div>
+    </div>
+  </div>  
+</div>
+ 
+
+<%else %>		
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4" id="signinbox">
+      <div class="getinthemiddle"
+            <br/>
+            <%= image_tag("/images/cslogo.png", :alt => "Classified Spectacular") %>
+            <br/><br/>
+            <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-danger" %> &nbsp&nbsp&nbsp
+            <%= link_to "Sign In", new_user_session_path, class: "btn btn-danger" %>
+      </div> 
+    </div>    
+  </div>
+</div>
+      
+ <% end %>	

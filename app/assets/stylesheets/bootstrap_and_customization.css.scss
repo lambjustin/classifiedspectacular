@@ -1,0 +1,184 @@
+@import url(https://fonts.googleapis.com/css?family=Great+Vibes);
+@import url(https://fonts.googleapis.com/css?family=Mrs+Sheppards);
+
+$body-bg: #ecf0f1;
+$navbar-inverse-bg: #7f8c8d;
+$navbar-inverse-link-color: #fff;
+$brand-primary: #2c3e50;
+$jumbotron-bg: #bdc3c7;
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+
+.center {
+     text-align: center;
+}
+
+
+// Custom Sticky Footer css
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 80px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 80px;
+  background-color: #000;
+  padding-top: 15px;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+.container {
+  width: auto;
+  padding: 0 15px;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+
+.formheader
+{
+  color: #FFF;
+}
+
+.librarymain img {
+  padding: 10px;
+}
+
+.getinthemiddle
+{
+  margin-top: 25px;
+  text-align: center;
+}
+
+
+.blackletters {
+  margin-right: 15px;
+}
+
+.blackletters a:hover {
+  color: #000;
+}
+
+
+// Get Rid Of That Damn Round Edge Shit
+* { 
+  border-radius: 0 !important;
+   -webkit-border-radius: 0 !important;
+     -moz-border-radius: 0 !important;
+          border-radius: 0 !important;}
+
+// Homepage Sign In Customization
+
+#signinbox {
+	background-image: url("/images/bg50percent.png");
+  background-repeat: repeat;
+	width: 350px;
+	margin-left: 100px;
+	margin-top: 125px;
+	min-height: 300px;
+  text-align: left;}
+
+
+.footerunlogged {
+  color: #FFF;
+  margin-right: 15px;
+  margin-top: 15px;
+}
+
+.deviseshared {
+  color: #FFF;
+}
+
+.deviseshared a:link, a:active, a:hover, a:visited {
+  color: #FFF;
+}
+
+
+// Homepage Sign In Button Customization
+
+#btn-enter
+
+.btn-enter { 
+  color: #000000; 
+  background-color: #c0392b; 
+  border-color: #E6E6E6; 
+  font-family: Arial, Helvetica, sans-serif;
+} 
+ 
+.btn-enter:hover, 
+.btn-enter:focus, 
+.btn-enter:active, 
+.btn-enter.active, 
+.open .dropdown-toggle.btn-enter { 
+  color: #000000; 
+  background-color: #c0392b; 
+  border-color: #E6E6E6; 
+} 
+ 
+.btn-enter:active, 
+.btn-enter.active, 
+.open .dropdown-toggle.btn-enter { 
+  background-image: none; 
+} 
+ 
+.btn-enter.disabled, 
+.btn-enter[disabled], 
+fieldset[disabled] .btn-enter, 
+.btn-enter.disabled:hover, 
+.btn-enter[disabled]:hover, 
+fieldset[disabled] .btn-enter:hover, 
+.btn-enter.disabled:focus, 
+.btn-enter[disabled]:focus, 
+fieldset[disabled] .btn-enter:focus, 
+.btn-enter.disabled:active, 
+.btn-enter[disabled]:active, 
+fieldset[disabled] .btn-enter:active, 
+.btn-enter.disabled.active, 
+.btn-enter[disabled].active, 
+fieldset[disabled] .btn-enter.active { 
+  background-color: #E6E6E6; 
+  border-color: #E6E6E6; 
+} 
+ 
+.btn-enter .badge { 
+  color: #E6E6E6; 
+  background-color: #000000; 
+}
+
+// Homepage Background Video Customization
+
+video#bgvid { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(polina.jpg) no-repeat;
+    background-size: cover; 
+}
+
+video#bgvid {
+    transition: 1s opacity;
+}
+.stopfade { opacity: .5; }

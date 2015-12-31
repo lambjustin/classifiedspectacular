@@ -1,0 +1,56 @@
+<% if user_signed_in? %>
+
+
+<footer class="footer">
+      <div class="container-fluid" style="text-align: center;">
+        <div class="row">
+          <div class="col-md-4">
+           <ul class="nav navbar-nav navbar">
+          <li class="blackletters"><%= link_to "Home", root_path %></li>
+          <li class="blackletters"><%= link_to "Library", library_path %></li>
+          </ul>
+          </div>
+
+
+          <div class="col-md-4"><%= image_tag("/images/footerLogo.png", width: 42, height: 42, :alt => "Confidential Spectacular") %>
+          </div>
+
+
+          <div class="col-md-4">
+            <ul class="nav navbar-nav navbar-right">
+          <% if user_signed_in? %>
+          <li class="blackletters"><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+          <% else %>
+          <li class="blackletters"><%= link_to "Sign In", new_user_session_path %></li>
+          <% end %>
+          </ul></div>
+        </div>
+      </div>
+
+</footer>
+
+<%else %>   
+
+<footer class="footer">
+      <div class="container-fluid" style="text-align: center;">
+        <div class="row">
+          <div class="col-md-4">
+            <ul class="nav navbar-nav navbar">
+            <%= image_tag("/images/footerLogo.png", width: 42, height: 42, :alt => "Confidential Spectacular") %>
+            </ul>
+          </div>
+
+
+          <div class="col-md-4">
+          </div>
+
+
+          <div class="col-md-4">
+            <ul class="nav navbar-nav navbar-right">
+            <li class="blackletters"><%= link_to "CLASSIFIED SPECTACULAR", root_path %></li>
+          </ul>
+        </div>
+      </div>
+
+</footer>
+<% end %>
