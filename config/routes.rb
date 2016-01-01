@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get "about" => "pages#about"  
   get "library" => "pages#library"
   get "tails" => "pages#tails"
+  get "breakout" => "pages#breakout"
 
 
   # The priority is based upon order of creation: first created -> highest priority.

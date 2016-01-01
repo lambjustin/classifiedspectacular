@@ -32,6 +32,7 @@ body {
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 80px;
+  text-align: center;
   background-color: #000;
   padding-top: 15px;
 }
@@ -60,7 +61,6 @@ body {
 
 .getinthemiddle
 {
-  margin-top: 25px;
   text-align: center;
 }
 
@@ -71,6 +71,10 @@ body {
 
 .blackletters a:hover {
   color: #000;
+}
+
+.contact a:hover, a:active, a:visited, a:link {
+  color: #ff00b3;
 }
 
 
@@ -87,10 +91,10 @@ body {
 	background-image: url("/images/bg50percent.png");
   background-repeat: repeat;
 	width: 350px;
-	margin-left: 100px;
-	margin-top: 125px;
-	min-height: 300px;
-  text-align: left;}
+	margin: 0 auto;
+	margin-top: 0px;
+	min-height: 250px;
+  text-align: center;}
 
 
 .footerunlogged {

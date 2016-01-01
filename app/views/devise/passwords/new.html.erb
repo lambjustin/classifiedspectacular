@@ -1,12 +1,28 @@
-<h2>Forgot your password?</h2>
+<div class="container">
+<div class="getinthemiddle">
+      <%= link_to image_tag('/images/cslogo2.png', :alt => "Classified Spectacular"), root_path %>
+      
+      <div id="signinbox">
+      <div class="container">
+          <br/>
 
-<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
-  <%= devise_error_messages! %>
+          <span class="formheader">Enter Email Address Below</span><br/><br/>
+          <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
+  			<%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
+          <div class="form-group">
+          <%= f.email_field :email, :autofocus => true, class: "form-control" %>
+          </div>
+			<br/>
+          <div class="form-group">
+          <%= f.submit "Send Reset Instructions" , class: "btn btn-success btn-lg" %></div>
+          <% end %>
 
-  <div><%= f.submit "Send me reset password instructions" %></div>
-<% end %>
+          <div class="form-group">
+          <%= render "devise/shared/links" %>
+          </div>
+    </div>
+    </div>
 
-<%= render "devise/shared/links" %>
+</div> 
+</div>

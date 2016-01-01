@@ -1,32 +1,31 @@
-<div class="container-fluid" style="text-align: center;">
-  <div class="row">
-    <div class="col-md-4" id="signinbox">
+<div class="container">
+<div class="getinthemiddle">
+    <%= link_to image_tag('/images/cslogo2.png', :alt => "Classified Spectacular"), root_path %>
+      
+      <div id="signinbox">
+      <div class="container">
+          <br/>
+          <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+          <%= devise_error_messages! %>
 
-  <div class="container">
-<span class="formheader"><h2>Sign Up</h2></span>
+          <div class="form-group">
+          <span class="formheader"><%= f.label :email %></span>
+          <%= f.email_field :email, :autofocus => true, class: "form-control" %>
+          </div>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+          <div class="form-group">
+          <span class="formheader"><%= f.label :password %></span>>
+          <%= f.password_field :password, class: "form-control" %>
+          </div>
 
-  <div class="form-group">
-  	<span class="formheader"><%= f.label :email %></span>
-  	<%= f.email_field :email, :autofocus => true, class: "form-control" %>
-  </div>
+          <div class="form-group"><%= f.submit "Create Account", class: "btn btn-success btn-lg" %></div>
+          <% end %>
+          
+          <div class="form-group">
+          <%= render "devise/shared/links" %>
+          </div>
+      </div>
+      </div>
 
-  <div class="form-group">
-  	<span class="formheader"><%= f.label :password %></span>>
-  	<%= f.password_field :password, class: "form-control" %>
-  </div>
-
-  <div class="form-group"><%= f.submit "Sign Up", class: "btn btn-danger" %></div>
-<% end %>
-
-  <div class="form-group">
-<%= render "devise/shared/links" %>
-  </div>
-    </div>
-
-
-    </div>
-  </div>  
+</div> 
 </div>

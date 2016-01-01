@@ -1,5 +1,31 @@
+<% if user_signed_in? %>
+
 <div class="getinthemiddle">
 
-<iframe src="https://player.vimeo.com/video/145460553?title=0&byline=0&portrait=0" width="900" height="506" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<%= link_to image_tag('/images/tailspremiere.png', :alt => "Premieres 2.15.16"), root_path %>
+
+<br/><br/>
+
+<p>Three strangers are unknowingly bound together by murder.
+	<br/><br/>
+	Written and Directed by Justin Lamb
+	<br/><br/>
+	Featuring Erin Bartley, Jonathan Bock, Evan Caminti, Tanner Dahlin, Matt Davidson, Sara Feinstein, Sean O'Reilly, Johnna Scrabis, Kris Weiner and Keisha Zoller.
+</p>
 
 </div>
+
+
+<%else %>		
+
+<div class="container">
+<div class="getinthemiddle">
+            <%= link_to image_tag('/images/cslogo2.png', :alt => "Classified Spectacular"), root_path %>
+            <br/>
+            <%= link_to "I Have A Log In", new_user_session_path, class: "btn btn-success btn-lg" %>&nbsp&nbsp&nbsp
+            <%= link_to "I Need A Log In", new_user_registration_path, class: "btn btn-danger btn-lg" %>
+            
+</div> 
+</div>
+      
+ <% end %>	

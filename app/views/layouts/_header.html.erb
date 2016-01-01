@@ -6,13 +6,19 @@
         <div class="row">
           <div class="col-md-4">
            <ul class="nav navbar-nav navbar">
+
+           <% flash.each do |name, msg| %>
+           <%= content_tag(:div, msg, class: "alert alert-success") %>
+           <% end %>
+
           <li class="blackletters"><%= link_to "Home", root_path %></li>
           <li class="blackletters"><%= link_to "Library", library_path %></li>
+          <li class="blackletters"><%= link_to "About", about_path %></li>
           </ul>
           </div>
 
 
-          <div class="col-md-4"><%= image_tag("/images/footerLogo.png", width: 42, height: 42, :alt => "Confidential Spectacular") %>
+          <div class="col-md-4"><%= image_tag("/images/footerLogo.png", width: 42, height: 42, :alt => "Classified Spectacular") %>
           </div>
 
 
@@ -35,22 +41,22 @@
       <div class="container-fluid" style="text-align: center;">
         <div class="row">
           <div class="col-md-4">
-            <ul class="nav navbar-nav navbar">
-            <%= image_tag("/images/footerLogo.png", width: 42, height: 42, :alt => "Confidential Spectacular") %>
-            </ul>
+           <% flash.each do |name, msg| %>
+           <%= content_tag(:div, msg, class: "alert alert-success") %>
+           <% end %>
           </div>
 
 
-          <div class="col-md-4">
+          <div class="col-md-4">           
+              <%= image_tag("/images/footerLogo.png", width: 42, height: 42, :alt => "Confidential Spectacular") %>
           </div>
 
 
-          <div class="col-md-4">
-            <ul class="nav navbar-nav navbar-right">
-            <li class="blackletters"><%= link_to "CLASSIFIED SPECTACULAR", root_path %></li>
-          </ul>
+          <div class="col-md-4"></div>
+
         </div>
       </div>
 
 </footer>
+
 <% end %>

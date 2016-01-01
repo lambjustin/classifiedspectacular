@@ -78,6 +78,6 @@ Rails.application.configure do
 
   #require for Heroku
   #Note to set to actual host.
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.default_url_options = { host: 'classfiedspectacular.heroku.com', port: 3000 }
 
 end
