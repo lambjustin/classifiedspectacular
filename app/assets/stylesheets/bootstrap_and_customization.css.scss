@@ -64,6 +64,8 @@ body {
   text-align: center;
 }
 
+#getinthemiddle a:link, a:active, a:hover, a:visited,  {
+  color: #fff;} 
 
 .blackletters {
   margin-right: 15px;
@@ -71,10 +73,6 @@ body {
 
 .blackletters a:hover {
   color: #000;
-}
-
-.contact a:hover, a:active, a:visited, a:link {
-  color: #ff00b3;
 }
 
 
@@ -97,18 +95,19 @@ body {
   text-align: center;}
 
 
+#getinthemiddle a:link, a:active, a:hover, a:visited,  {
+  color: #fff;}  
+
 .footerunlogged {
   color: #FFF;
   margin-right: 15px;
   margin-top: 15px;
 }
 
-.deviseshared {
+.footerunlogged {
   color: #FFF;
-}
-
-.deviseshared a:link, a:active, a:hover, a:visited {
-  color: #FFF;
+  margin-right: 15px;
+  margin-top: 15px;
 }
 
 
