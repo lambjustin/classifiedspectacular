@@ -2,46 +2,16 @@
 
 
 <footer class="footer">
-      <div class="container-fluid" style="text-align: center;">
-        <div class="row">
-          <div class="col-md-4">
-           <p class="linkmenu">
+      <div class="container">
+          <p class="text-muted">
           <%= link_to "Home", root_path %>&nbsp&nbsp&nbsp
-          <%= link_to "About", about_path %></p>
-          </div>
-
-
-          <div class="col-md-4">              
-            <%= image_tag("/images/footerLogo.png", width: 25, height: 25, :alt => "Confidential Spectacular") %>
-          </div>
-
-          <div class="col-md-4">
-          <p class="logoutline"><%= link_to "Log out", destroy_user_session_path, method: :delete %><span>
-          </p></div>
-        </div>
-      </div>
-
+          <%= link_to "About", about_path %>&nbsp&nbsp&nbsp
+          <%= link_to "Log out", destroy_user_session_path, method: :delete %>&nbsp&nbsp&nbsp
+          </p>
+      </div>  
 </footer>
 
 <%else %>   
 
-<footer class="footer">
-      <div class="container-fluid" style="text-align: center;">
-        <div class="row">
-          <div class="col-md-4">
-          </div>
-
-
-          <div class="col-md-4">           
-              <%= image_tag("/images/footerLogo.png", width: 25, height: 25, :alt => "Confidential Spectacular") %>
-          </div>
-
-
-          <div class="col-md-4"></div>
-
-        </div>
-      </div>
-
-</footer>
 
 <% end %>
