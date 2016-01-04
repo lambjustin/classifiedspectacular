@@ -1,29 +1,29 @@
 <% if user_signed_in? %>
 
 <div class="container">
-<div class="aboutthemiddle">
+<div class="center">
+<div class="about">
 
 <%= image_tag("/images/signature.png", :alt => "Classified Spectacular") %>
 
-<h5 class="contact">Classified Spectacular is an invitation-only film library.
+<p>Classified Spectacular is an invitation-only film library.
 <br/><br/>
 Invitation requests may be made <a href="mailto:justindlamb@gmail.com?Subject=Classified%20Spectacular%20Invitation%20Request" target="_top">here</a>.
-</h5>
+</p>
 
+</div>
 </div>
 </div>
 
 <%else %>		
 
 <div class="container">
-
-	<div class="getinthemiddle">
+<div class="center">
 	<%= link_to image_tag('/images/cslogo2.png', :alt => "Classified Spectacular"), root_path %>
 	<br/>
 	<%= link_to "I Have A Log In", new_user_session_path, class: "btn btn-success btn-lg" %>&nbsp&nbsp
 	<%= mail_to "justindlamb@gmail.com", "I Need A Log In", subject: "Classified Spectacular Invite Request", class: "btn btn-danger btn-lg" %>    
-	</div> 
-
+</div> 
 </div>
       
  <% end %>	

@@ -1,9 +1,7 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
-.center {
-     text-align: center;
-}
+.center {text-align: center;}
 
 
 // Custom Sticky Footer css
@@ -12,12 +10,13 @@
 -------------------------------------------------- */
 html {
   position: relative;
-  min-height: 100%;
-}
+  min-height: 100%;}
+
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
-}
+  background-color: #bdc3c7;}
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -25,16 +24,11 @@ body {
   /* Set the fixed height of the footer here */
   height: 60px;
   text-align: center;
-  background-color: #bdc3c7;
-  padding-top: 0px;
-}
-
-.footer img {
-    padding-top: 0px;}
+  background-color: #c0392b;
+  padding-top: 0px;}
 
 .footer p {
-    color: #fff;
-    padding-top: 0px;}
+    color: #fff;}
 
 .footer p a:link, a:active, a:visited {
     color: #fff;}
@@ -50,44 +44,38 @@ body {
 
 .container {
   width: auto;
-  padding: 0 15px;
-}
-.container .text-muted {
-  margin: 20px 0;
-}
+  padding: 0 15px;}
 
-.formheader
-{
-  color: #FFF;
-}
+.container .text-muted {
+  margin: 20px 0;}
+
+.formheader {
+  color: #FFF;}
 
 .librarymain img {
-  padding: 10px;
+  padding: 10px;}
+
+.premiereimage {
+  padding-bottom: 35px;
 }
 
+.about a:link, a:active, a:visited  {
+  color: #c0392b;}
 
-.aboutthemiddle
-{
-  text-align: center;
-}
+.about a:hover {
+  color: #c0392b;
+  text-decoration: underline;} 
 
-.aboutthemiddle a:link, a:active, a:hover, a:visited  {
-  color: #ff00b3;} 
-
-.getinthemiddle
-{
-  text-align: center;
-}
+.getinthemiddle {
+  text-align: center;}
 
 .getinthemiddle a:link, a:active, a:hover, a:visited,  {
-  color: #fff;} 
+  color: #2c3e50;} 
 
-.blackletters {
-  margin-right: 15px;}
+#linkfix a:link, a:active, a:hover, a:visited {
+  text-color: #2c3e50;
+  text-decoration: none;}  
 
-.blackletters a:link, a:active, a:hover, a:visited {
-  color: #fff;
-}
 
 
 // Get Rid Of That Damn Round Edge Shit
@@ -113,9 +101,3 @@ body {
 
 #getinthemiddle a:link, a:active, a:hover, a:visited,  {
   color: #fff;}  
-
-.footerunlogged {
-  color: #FFF;
-  margin-right: 15px;
-  margin-top: 15px;
-}

@@ -1,6 +1,7 @@
 <% if user_signed_in? %>
 
-<div class="container" style="text-align: center;">
+<div class="container">
+<div class="center">	
 
 	<% flash.each do |name, msg| %>
 	<%= content_tag(:div, msg, class: "alert alert-success") %>
@@ -9,22 +10,21 @@
 	<div class="librarymain">
 	<%= link_to image_tag('/images/breakout.png',  :alt => "Breakout"), breakout_path %>
 	<%= link_to image_tag('/images/tails.png',  :alt => "Tails"), tails_path %>
-	<%= image_tag("/images/thepickup.png", :alt => "The Pickup") %>
 	</div>
 
+</div>
 </div>
 
 <%else %>		
 
 <div class="container">
-
-	<div class="getinthemiddle">
+<div class="center">	
 	<%= link_to image_tag('/images/cslogo2.png', :alt => "Classified Spectacular"), root_path %>
 	<br/>
 	<%= link_to "I Have A Log In", new_user_session_path, class: "btn btn-success btn-lg" %>&nbsp&nbsp
 	<%= mail_to "justindlamb@gmail.com", "I Need A Log In", subject: "Classified Spectacular Invite Request", class: "btn btn-danger btn-lg" %>    
-	</div> 
-
+	
+</div> 
 </div>
       
  <% end %>	

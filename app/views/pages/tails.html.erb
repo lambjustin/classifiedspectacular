@@ -1,20 +1,17 @@
 <% if user_signed_in? %>
 
-<div class="getinthemiddle">
+<div class="container">
+<div class="center">
 
-<%= link_to image_tag('/images/tailspremiere.png', :alt => "Premieres 2.15.16"), root_path %>
+<%= link_to image_tag('/images/tailspremiere.png', :alt => "Premieres 2.15.16", class: "premiereimage"), root_path %>
 
-<br/><br/>
+<p>Three strangers are unknowingly bound together by murder.<br/>
+Written and Directed by Justin Lamb<br/>
+Featuring Erin Bartley, Jonathan Bock, Evan Caminti, Tanner Dahlin, Matt Davidson, Sara Feinstein, Sean O'Reilly, Johnna Scrabis, Kris Weiner and Keisha Zoller.</p>
+<br/>
+<%= link_to "Return to Library", root_path, class: "btn btn-danger" %>
 
-<p>Three strangers are unknowingly bound together by murder.
-	<br/><br/>
-	Written and Directed by Justin Lamb
-	<br/><br/>
-	Featuring Erin Bartley, Jonathan Bock, Evan Caminti, Tanner Dahlin, Matt Davidson, Sara Feinstein, Sean O'Reilly, Johnna Scrabis, Kris Weiner and Keisha Zoller.
-	<br/><br/>
-	<%= link_to "Return to Library", root_path %>
-</p>
-
+</div>
 </div>
 
 <%else %> 
