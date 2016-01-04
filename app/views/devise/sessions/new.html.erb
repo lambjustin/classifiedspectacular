@@ -1,32 +1,54 @@
-<div class="container">
-<div class="getinthemiddle">
-      <%= link_to image_tag('/images/cslogo2.png', :alt => "Classified Spectacular"), root_path %>
-      
-      <div id="signinbox">
-      <div class="container">
-          <br/>
-          <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+<% if user_signed_in? %>
 
-          <div class="form-group">
-          <span class="formheader"><%= f.label :email %></span>
-          <%= f.email_field :email, :autofocus => true, class: "form-control" %>
-          </div>
+<div class="container" style="text-align: center;">
 
-          <div class="form-group">
-          <span class="formheader"><%= f.label :password %></span>
-          <%= f.password_field :password, class: "form-control" %>
-          </div>
+  <% flash.each do |name, msg| %>
+  <%= content_tag(:div, msg, class: "alert alert-success") %>
+  <% end %>
 
-          <div class="form-group">
-          <%= f.submit "Sign In", class: "btn btn-success btn-lg" %></div>
-          <% end %>
+  <div class="librarymain">
+  <%= link_to image_tag('/images/breakout.png',  :alt => "Breakout"), breakout_path %>
+  <%= link_to image_tag('/images/tails.png',  :alt => "Tails"), tails_path %>
+  <%= image_tag("/images/thepickup.png", :alt => "The Pickup") %>
+  </div>
 
-          <div class="form-group">
-          <%= render "devise/shared/links" %>
-          </div>
-    </div>
-    </div>
-
-</div> 
 </div>
 
+<%else %> 
+
+<div class="container">
+<div class="getinthemiddle">
+
+  <%= link_to image_tag('/images/cslogo2.png', :alt => "Classified Spectacular"), root_path %>
+
+  <div id="signinbox">
+    <div class="container">
+      <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+
+      <div class="form-group">
+      <br/>
+      <span class="formheader"><%= f.label :email %></span>
+      <%= f.email_field :email, :autofocus => true, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+      <span class="formheader"><%= f.label :password %></span>
+      <%= f.password_field :password, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+      <%= f.submit "Sign In", class: "btn btn-success btn-lg" %>
+      </div>
+      <% end %>
+
+      <div class="form-group">
+      <p><%= link_to "I Forgot My Password", new_user_password_path %></p>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</div>
+
+<% end %>  

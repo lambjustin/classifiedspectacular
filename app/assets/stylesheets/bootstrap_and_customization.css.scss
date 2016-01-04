@@ -1,11 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Great+Vibes);
-@import url(https://fonts.googleapis.com/css?family=Mrs+Sheppards);
-
-$body-bg: #ecf0f1;
-$navbar-inverse-bg: #7f8c8d;
-$navbar-inverse-link-color: #fff;
-$brand-primary: #2c3e50;
-$jumbotron-bg: #bdc3c7;
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
@@ -24,18 +16,42 @@ html {
 }
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 80px;
+  height: 60px;
   text-align: center;
   background-color: #000;
-  padding-top: 15px;
+  padding-top: 20px;
 }
+
+.footer img {
+    padding-top: 0px;}
+
+.footer p {
+    color: #fff;
+    padding-top: 0px;
+}
+
+.footer p a:link, a:active, a:visited {
+    color: #fff;
+}
+
+.footer p a:hover {
+    color: #fff;
+    text-decoration: underline;}
+
+.linkmenu {
+    text-align: left;
+    margin-left: 75px;}        
+
+.logoutline {
+    text-align: right;
+    margin-right: 75px;}
 
 
 /* Custom page CSS
@@ -99,7 +115,7 @@ body {
 	width: 350px;
 	margin: 0 auto;
 	margin-top: 0px;
-	min-height: 250px;
+	min-height: 150px;
   text-align: center;}
 
 #signinbox a:link, a:active, a:hover, a:visited,  {
@@ -113,79 +129,3 @@ body {
   margin-right: 15px;
   margin-top: 15px;
 }
-
-
-// Homepage Sign In Button Customization
-
-#btn-enter
-
-.btn-enter { 
-  color: #000000; 
-  background-color: #c0392b; 
-  border-color: #E6E6E6; 
-  font-family: Arial, Helvetica, sans-serif;
-} 
- 
-.btn-enter:hover, 
-.btn-enter:focus, 
-.btn-enter:active, 
-.btn-enter.active, 
-.open .dropdown-toggle.btn-enter { 
-  color: #000000; 
-  background-color: #c0392b; 
-  border-color: #E6E6E6; 
-} 
- 
-.btn-enter:active, 
-.btn-enter.active, 
-.open .dropdown-toggle.btn-enter { 
-  background-image: none; 
-} 
- 
-.btn-enter.disabled, 
-.btn-enter[disabled], 
-fieldset[disabled] .btn-enter, 
-.btn-enter.disabled:hover, 
-.btn-enter[disabled]:hover, 
-fieldset[disabled] .btn-enter:hover, 
-.btn-enter.disabled:focus, 
-.btn-enter[disabled]:focus, 
-fieldset[disabled] .btn-enter:focus, 
-.btn-enter.disabled:active, 
-.btn-enter[disabled]:active, 
-fieldset[disabled] .btn-enter:active, 
-.btn-enter.disabled.active, 
-.btn-enter[disabled].active, 
-fieldset[disabled] .btn-enter.active { 
-  background-color: #E6E6E6; 
-  border-color: #E6E6E6; 
-} 
- 
-.btn-enter .badge { 
-  color: #E6E6E6; 
-  background-color: #000000; 
-}
-
-// Homepage Background Video Customization
-
-video#bgvid { 
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    background: url(polina.jpg) no-repeat;
-    background-size: cover; 
-}
-
-video#bgvid {
-    transition: 1s opacity;
-}
-.stopfade { opacity: .5; }

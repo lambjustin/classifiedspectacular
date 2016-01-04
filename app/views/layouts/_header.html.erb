@@ -5,31 +5,19 @@
       <div class="container-fluid" style="text-align: center;">
         <div class="row">
           <div class="col-md-4">
-           <ul class="nav navbar-nav navbar">
-
-           <% flash.each do |name, msg| %>
-           <%= content_tag(:div, msg, class: "alert alert-success") %>
-           <% end %>
-
-          <li class="blackletters"><%= link_to "Home", root_path %></li>
-          <li class="blackletters"><%= link_to "Library", library_path %></li>
-          <li class="blackletters"><%= link_to "About", about_path %></li>
-          </ul>
+           <p class="linkmenu">
+          <%= link_to "Home", root_path %>&nbsp&nbsp&nbsp
+          <%= link_to "About", about_path %></p>
           </div>
 
 
-          <div class="col-md-4"><%= image_tag("/images/footerLogo.png", width: 42, height: 42, :alt => "Classified Spectacular") %>
+          <div class="col-md-4">              
+            <%= image_tag("/images/footerLogo.png", width: 25, height: 25, :alt => "Confidential Spectacular") %>
           </div>
-
 
           <div class="col-md-4">
-            <ul class="nav navbar-nav navbar-right">
-          <% if user_signed_in? %>
-          <li class="blackletters"><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
-          <% else %>
-          <li class="blackletters"><%= link_to "Sign In", new_user_session_path %></li>
-          <% end %>
-          </ul></div>
+          <p class="logoutline"><%= link_to "Log out", destroy_user_session_path, method: :delete %><span>
+          </p></div>
         </div>
       </div>
 
@@ -41,14 +29,11 @@
       <div class="container-fluid" style="text-align: center;">
         <div class="row">
           <div class="col-md-4">
-           <% flash.each do |name, msg| %>
-           <%= content_tag(:div, msg, class: "alert alert-success") %>
-           <% end %>
           </div>
 
 
           <div class="col-md-4">           
-              <%= image_tag("/images/footerLogo.png", width: 42, height: 42, :alt => "Confidential Spectacular") %>
+              <%= image_tag("/images/footerLogo.png", width: 25, height: 25, :alt => "Confidential Spectacular") %>
           </div>
 
 
