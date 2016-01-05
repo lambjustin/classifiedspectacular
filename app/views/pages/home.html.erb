@@ -8,8 +8,8 @@
 	<% end %>
 
 	<div class="librarymain">
-	<%= link_to image_tag('/images/breakout.png',  :alt => "Breakout"), breakout_path %>
-	<%= link_to image_tag('/images/tails.png',  :alt => "Tails"), tails_path %>
+	<%= link_to image_tag('/images/breakout.png',  :alt => "Breakout", class: "img-responsive"), breakout_path %>
+	<%= link_to image_tag('/images/tails.png',  :alt => "Tails",  class: "img-responsive"), tails_path %>
 	</div>
 
 </div>
@@ -19,7 +19,7 @@
 
 <div class="container">
 <div class="center">	
-	<%= link_to image_tag('/images/cslogo2.png', :alt => "Classified Spectacular"), root_path %>
+	<%= link_to image_tag('/images/cslogo2.png', :alt => "Classified Spectacular",  class: "img-responsive"), root_path %>
 	<br/>
 	<%= link_to "I Have A Log In", new_user_session_path, class: "btn btn-success btn-lg" %>&nbsp&nbsp
 	<%= mail_to "justindlamb@gmail.com", "I Need A Log In", subject: "Classified Spectacular Invite Request", class: "btn btn-danger btn-lg" %>    
